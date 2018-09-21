@@ -56,6 +56,9 @@ object StreamingKafka {
     //消息key：id ， value：message
     val lines: DStream[String] = stream.map(record => record.value)
 
+
+
+
     val res = lines.flatMap(_.split(" ")).map((_, 1))
 
     val result = res.updateStateByKey(sumFun, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
