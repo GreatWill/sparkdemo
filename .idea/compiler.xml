@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="saprkdemo" />
+        <module name="sparkdemo" />
       </profile>
     </annotationProcessing>
   </component>
